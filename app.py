@@ -108,6 +108,7 @@ def download_decrypt():
 						key = str[0:32]
 						file_obj = open(filepath,"r")
 						msg = file_obj.read()
+						flash(msg)
 						text = ENCDEC.AESCipher(key).decrypt(msg)
 						outputFilepath = "./media/temp/DecryptedFile.txt"
 						file_obj = open(outputFilepath,"w")
