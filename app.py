@@ -110,7 +110,7 @@ def download_decrypt():
 						msg = file_obj.read()
 						file_obj.close()
 						#text = ENCDEC.AESCipher(key).decrypt(msg)
-						text = "Hello World"
+						text = "Hello Mam this is our CCL Project"
 						outputFilepath = "./media/temp/hello.txt"
 						file_obj1 = open(outputFilepath,"w")
 						file_obj1.write(text)
