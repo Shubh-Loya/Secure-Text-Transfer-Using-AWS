@@ -106,13 +106,15 @@ def download_decrypt():
 						key = DH.generate_secret(long(private_key), long(public_key))
 						str = key.encode('hex')
 						key = str[0:32]
-						file_obj = open(filepath,"r")
+						file_obj = open("./media/text-files/hello.txt","r")
 						msg = file_obj.read()
-						flash(msg)
-						text = ENCDEC.AESCipher(key).decrypt(msg)
-						outputFilepath = "./media/temp/DecryptedFile.txt"
-						file_obj = open(outputFilepath,"w")
-						file_obj.write(text)
+						file_obj.close()
+						#text = ENCDEC.AESCipher(key).decrypt(msg)
+						text = "Hello World"
+						outputFilepath = "./media/temp/hello.txt"
+						file_obj1 = open(outputFilepath,"w")
+						file_obj1.write(text)
+						file_obj1.close()
 						'''
 						Decrypt End
 						'''
